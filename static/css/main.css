@@ -1,0 +1,77 @@
+
+html {
+    background-image:url("../../img/cat.jpg")
+
+}
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    z-index: 1000;
+}
+a {
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    opacity: 0.7;
+    font-weight: bold;
+}
+input[type="text"] {
+    width: 300px;
+    height: 24px;
+    font-size: 20px;
+    z-index: 3000;
+}
+input[type=submit] {
+    padding: 6px 16px 4px 16px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 18px;
+    z-index: 3000;
+    border-radius: 40px;
+}
+form {
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.content h1 {
+    font-size: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    opacity: 0.4;
+    z-index: 100;
+}
+h1 {
+    z-index: 10;
+}
+h2 {
+    color: #3e3e3e;
+}
+.container {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: absolute;
+    top: 10%;
+    z-index: 2000;
+    left: 0;
+    right: 0;
+}
+
+.update {
+    color: #008b8b;
+
+}
+
+.delete {
+    color:#e6251c;
+}

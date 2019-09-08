@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Task Management</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Task <br> Management</h1>
+    <div class="container">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+        {% if tasks|length < 1 %}
+            <h2>Noタスク！！ <br>You are free!!</h2>
+        {% else %}
+        <table border="1" style="border-collapse: collapse">
+            <tr>
+                <th>タスク</th>
+                <th>登録日</th>
+                <th>どうする</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a class="delete" href="/delete/{{ task.id }}">Delete</a>
+                    <br>
+                    <a class="update" href="/update/{{ task.id }}">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        
+
+    </div>
+    
+
+</div>
+{% endblock %}
